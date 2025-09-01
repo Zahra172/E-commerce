@@ -51,7 +51,7 @@ export default function Wishlist() {
 
   return (
     <>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid mx-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {wishlistDetails?.data?.map((item) => (
         
         <div key={item._id} className='w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
@@ -103,7 +103,7 @@ export default function Wishlist() {
             </div>
             <div className="flex items-center justify-between">
               <span className="text-3xl font-bold text-gray-900 dark:text-white">${item.price}</span>
-              <span onClick={() => addProduct(item._id)} className="cursor-pointer text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</span>
+              <span onClick={() => addProduct(item._id)} className="cursor-pointer text-white bg-[#00c950] hover:bg-[#116834] focus:ring-4  focus:outline-none focus:ring-[#00c950] font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#00c950] dark:hover:bg-[#0b6c32] dark:focus:ring-[#00c950]">Add to cart</span>
             </div>
           </div>
         </div>

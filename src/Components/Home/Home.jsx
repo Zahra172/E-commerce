@@ -8,7 +8,7 @@ import MainSlider from '../MainSlider/MainSlider';
 
 export default function Home() {
     
-    let {setCounter ,changeCounter} = useContext(CounterContext);
+    // let {setCounter ,changeCounter} = useContext(CounterContext);
 
     useEffect(()=>{},[])
   return (<>

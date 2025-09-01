@@ -112,7 +112,7 @@ export default function ProductDetails() {
   return (
     <>
       {loading ? (
-        <div className="lds-spinner  text-pink-700">
+        <div className="lds-spinner  text-[#00c950]">
           <div></div>
           <div></div>
           <div></div>
@@ -128,7 +128,7 @@ export default function ProductDetails() {
         </div>
       ) : (
         <>
-          <div className="row ">
+          <div className="row w-[85%] mx-auto ">
             <div className="w-1/4">
               <Slider {...settings}>
                 {productDetails?.images.map((src) => (
@@ -142,8 +142,8 @@ export default function ProductDetails() {
               </Slider>
               {/* <img className='w-full rounded-lg' src={productDetails?.imageCover} alt={productDetails?.title}/> */}
             </div>
-            <div className="w-3/4 px-10 py-6">
-              <h1 className=" text-pink-600 font-bold ">
+            <div className="w-3/4 px-5 py-6">
+              <h1 className=" text-[#00c950] font-bold ">
                 {productDetails?.title}
               </h1>
               <p className="my-6">{productDetails?.description}</p>
@@ -158,46 +158,55 @@ export default function ProductDetails() {
                 </span>
               </div>
               <div className="flex items-center gap-4">
-  <button
-    onClick={() => addProduct(productDetails.id)}
-    className="px-4 py-2 w-1/3 bg-pink-700 my-5 rounded-md"
-  >
-    add to cart
-  </button>
-  
-  <svg
-  onClick={() => {
-    toggleWishlist(productDetails.id);
-  }}
-  xmlns="http://www.w3.org/2000/svg"
-  fill={isLiked ? "red" : "none"}
-  viewBox="0 0 24 24"
-  stroke="currentColor"
-  className={`w-12 h-12 cursor-pointer ${isLiked ? 'text-red-500' : 'text-gray-500'} transform rotate-180 overflow-visible`}
->
-  <path
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="2"
-    d="M11.049 2.927C10.259 1.765 8.9 1.765 8.11 2.927 6.759 4.472 3 8.29 3 11.7c0 3.412 2.588 5.79 5.539 5.79 1.65 0 3.083-.852 4.461-2.317 1.378 1.465 2.811 2.317 4.461 2.317 2.951 0 5.539-2.378 5.539-5.79 0-3.41-3.759-7.228-5.11-8.773z"
-  />
-</svg>
+                <button
+                  onClick={() => addProduct(productDetails.id)}
+                  className="px-4 py-2 w-1/3 bg-[#00c950] hover:bg-[#0d6430] text-white my-5 rounded-md"
+                >
+                  add to cart
+                </button>
 
-</div>
-
-    
+                <svg
+                  onClick={() => {
+                    toggleWishlist(productDetails.id);
+                  }}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill={isLiked ? "red" : "none"}
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className={`w-12 h-12 cursor-pointer ${
+                    isLiked ? "text-red-500" : "text-gray-500"
+                  } transform rotate-180 overflow-visible`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M11.049 2.927C10.259 1.765 8.9 1.765 8.11 2.927 6.759 4.472 3 8.29 3 11.7c0 3.412 2.588 5.79 5.539 5.79 1.65 0 3.083-.852 4.461-2.317 1.378 1.465 2.811 2.317 4.461 2.317 2.951 0 5.539-2.378 5.539-5.79 0-3.41-3.759-7.228-5.11-8.773z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-          <h3 className=" font-semibold text-pink-700 text-lg mt-7 mb-4">
+          
+
+          <div className="w-[85%] mx-auto mb-10">
+            <h3 className=" font-semibold text-[#00c950] text-lg mt-7 mb-4">
             Related products
           </h3>
-
-          <div className="">
             <Slider {...set}>
               {relatedProduct.map((product) => (
-                <div className="related-product-item px-3 border " key={product.id}>
-                  <Link to={`/productdetails/${product.id}/${product.category.name}`}>
-                    <img className="w-full rounded-lg " src={product?.imageCover} alt={product.title} />
+                <div
+                  className="related-product-item px-3 border "
+                  key={product.id}
+                >
+                  <Link
+                    to={`/productdetails/${product.id}/${product.category.name}`}
+                  >
+                    <img
+                      className="w-full rounded-lg "
+                      src={product?.imageCover}
+                      alt={product.title}
+                    />
                   </Link>
                 </div>
               ))}

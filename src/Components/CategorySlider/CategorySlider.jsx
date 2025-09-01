@@ -33,7 +33,7 @@ export default function CategorySlider() {
     },[])
 
   return (<>
-      <div>
+      <div className='w-[85%] mx-auto my-8'>
       <h2 className='mt-8 mb-4 font-bold text-pink-600 text-lg'>Shop popular categories</h2>
     <Slider {...settings}>
         

@@ -63,7 +63,7 @@ h1 {
   box-sizing: border-box;
 }
 .lds-spinner {
-  color: rgb(255, 0, 191);
+  color: #00c950;
   display: inline-block;
   position: relative;
  top: 20%;

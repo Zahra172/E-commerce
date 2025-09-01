@@ -31,12 +31,12 @@ export default function Navbar() {
   }
 
   let { cartCounter } = useContext(CartContext);
-  let { counter, userName } = useContext(CounterContext);
+  // let { counter, userName } = useContext(CounterContext);
 
   return (
     <>
-      <nav className="bg-black static z-20 lg:fixed top-0 right-0 left-0 py-2">
-        <div className="container mx-auto py-2 flex flex-col lg:flex-row justify-between items-center">
+      <nav className="bg-black text-black static z-20 lg:fixed top-0 right-0 left-0 py-2">
+        <div className="container w-[85%] mx-auto py-2 flex flex-col lg:flex-row justify-between items-center">
           <div className="flex justify-between items-center w-full lg:w-auto">
             <img src={logo} width={110} className="text-orange-400" alt="freshCart" />
             <button

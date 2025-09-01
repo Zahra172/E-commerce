@@ -47,7 +47,7 @@ export default function GetRecentProducts() {
         </div>
     }
     return (
-        <div className="row">
+        <div className="row w-[85%] mx-auto">
             {data?.data.data.map((element) => (
                 <div key={element.id} className="lg:w-1/6 md:w-3/6 w-full px-2 my-4 ">
                     <div className="product">
@@ -55,7 +55,7 @@ export default function GetRecentProducts() {
                         <Link to={`/productdetails/${element.id}/${element.category.name}`}>
                             <img src={element?.imageCover} alt={element.title} />
                             
-                            <span className="my-2 font-light text-pink-600 ">
+                            <span className="my-2 font-light text-[#00c950] ">
                                 {element.category.name}
                             </span>
                             <h3 className="my-1 font-normal">
@@ -69,7 +69,7 @@ export default function GetRecentProducts() {
                                 </span>
                             </div>
                         </Link>
-                        <button onClick={() => addProduct(element.id)} className="btn">Add to Cart</button>
+                        <button onClick={() => addProduct(element.id)} className="btn bg-[#00c950]">Add to Cart</button>
                         
                     </div>
                 </div>

@@ -19,7 +19,7 @@ export default function MainSlider() {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row lg:space-x-4">
+      <div className="flex flex-col lg:flex-row lg:space-x-4 w-[85%] mx-auto my-8">
         <div className="lg:w-3/4 w-full">
           <Slider {...settings}>
             <div>
